@@ -1,0 +1,184 @@
+body{
+    margin:0px;
+    height:10vh;
+  }
+  *{
+      padding:0px;
+      margin:0px;
+  }
+  label,input{
+      align-self: center;
+      display:block;
+  }
+  .container{
+    display:grid;
+    height:100vh;
+    grid-template-columns:35% 10% 55%;
+    grid-template-rows:0.2fr 0.1fr 0.6fr 0.1fr;
+    grid-template-areas:
+      "nav nav nav"
+      ". . add-btn"
+      "contacts-wrapper . details-wrapper"
+      "footer footer footer";
+      box-sizing: border-box;
+  }
+  
+  nav{
+    background-color:skyblue;
+    font-size:35px;
+    color:white;
+    padding:25px;
+    grid-area:nav;
+  }
+  
+  #add-btn{
+    grid-area:add-btn;
+    justify-self:end;
+    background-color:skyblue;
+    margin-top:10px;
+    margin-right:2%;
+    padding:5px;
+    height:30px;
+    width: 90px;
+    color: white;
+    border: none;
+  }
+  
+  .details-wrapper{
+    grid-area:details-wrapper;
+    display:grid;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas: 
+            "details-text"
+            "form-wrapper";
+  }
+  .form-wrapper{
+      border:1px solid black;
+      display: grid;
+    grid-template-columns: 0.5fr 0.1fr 0.5fr;
+    grid-template-rows: 20% 20% 50% 10%;
+    grid-template-areas: 
+    "form-element1 . form-element2"
+    "form-element3 . form-element4"
+    "form-element5 form-element5 form-element5"
+    ". . btn";
+    padding:5%;
+  }
+  .form-element1{
+      grid-area: form-element1;
+      
+  }
+  .form-element2{
+      grid-area: form-element2;
+  }
+  .form-element3{
+      grid-area: form-element3;
+  }
+  .form-element4{
+      grid-area: form-element4;
+  }
+  .form-element5{
+      grid-area: form-element5;
+  }
+  #btn{
+      grid-area: btn;
+      background-color: skyblue;
+      align-items: center;
+      justify-content: center;
+      color:white;
+      margin-right: 17px;
+      /* height:70%; */
+      width: 50%;
+      border: none;
+      height: 30px;
+      justify-self: end;
+  }
+ 
+  .contacts-wrapper{
+    grid-area:contacts-wrapper;
+    display:grid;
+    margin-left: 6px;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 0.2fr 0.8fr;
+    grid-template-areas:
+      "contact-text . search"
+      "divs divs divs";
+  }
+  .footer{
+    grid-area:footer;
+  }
+  .contact-text{
+      align-self: center;
+      font-weight: bold;
+      /* font-size:1.5em; */
+      font-size: 30px;
+      grid-area:contact-text;
+      /* padding-top: 33px; */
+  }
+  .search{
+      grid-area:search;
+      height: 26px;
+      wiheidgdth: 10px;
+      /* margin-top: 20px; */
+      /* margin-top: 20px; */
+      /* margin-bottom: 20px; */
+  }
+  .divs{
+      grid-area:divs;
+      border:1px solid black;
+        overflow:scroll;
+  }
+  .div{
+      border-bottom:1px solid black;
+      height:50px;
+  }
+  .details-text{
+    font-weight: bold;
+    font-size: 30px;
+    align-self: center;
+    /* padding-top:5%; */
+  }
+  .footer{
+      justify-self: center;
+      padding-top:50px;
+  }
+
+  @media only screen and (max-width:752px){
+    .container{  
+      grid-template-columns:1fr ;
+      grid-template-rows:10% 10% 20% 50% 10% ;
+      grid-template-areas: 
+      "nav"
+      "add-btn"
+      "contacts-wrapper"
+      "details-wrapper"
+      "footer";
+    }
+    /* .form-wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 15% 15% 15% 30% 10%;
+        grid-template-areas: 
+        "form-element1"
+        "form-element2"
+        "form-element3"
+        "form-element4"
+        "form-element5"
+        "btn";
+        padding:0;
+        box-sizing
+        
+        : border-box;
+    } */
+    
+    .form-wrapper{
+        padding:1%;
+    }
+    .details-wrapper{
+        grid-template-rows: 10% 90%;
+    }
+
+  }
+  
+  
+  
+  
